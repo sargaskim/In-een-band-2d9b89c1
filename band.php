@@ -12,7 +12,11 @@ echo $computter;
 foreach ($albums as $naam => $prijs){ 
     echo $naam. " kost €". $prijs.PHP_EOL;
 }
+$totaalAlbum = count($albums);
 
-echo "Het totaalbedrag van alle albums is €28,50" .PHP_EOL;
-echo " De gemiddelde prijs van alle albums is €€7.125" .PHP_EOL;
+$totaal = $albums["Citizen of Glass"] + $albums["Night"] + $albums["New Eyes"] + $albums["Strange Trails"];
+$gemiddelde = $totaal / $totaalAlbum;
+
+echo "Het totaalbedrag van alle albums is €". $totaal .PHP_EOL;
+echo " De gemiddelde prijs van alle albums is ". $gemiddelde .PHP_EOL;
 ?>
